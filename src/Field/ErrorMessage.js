@@ -16,7 +16,7 @@ class ErrorMessage extends React.Component {
     render() {
         const { name, formik } = this.props;
         const error = getError(name, formik);
-        return error && <View><Text>{ error }</Text></div>;
+        return error && <View><Text>{ error }</Text></View>;
     }
 }
 
