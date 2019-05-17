@@ -11,14 +11,12 @@ const Form = ({config, formik}) => {
 
   return (
     <View>
-      {/*<form className={ htmlClass } onSubmit={ handleSubmit } onReset={ handleReset }>*/}
       {_.map(elements, ({name: elementName, ...rest}, key) => {
         let element = _.assign({}, rest)
         element.name = prefixNameToElement ? joinNames(name, elementName) : elementName
 
         return <Element key={key} config={element}/>
       })}
-      {/*</form>*/}
     </View>
   )
 }
